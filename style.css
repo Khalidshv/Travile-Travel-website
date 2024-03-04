@@ -24,6 +24,7 @@ header{
     padding: 20px;
     position: fixed;
     background: #fff;
+    z-index: 1;
 }
 
 .nav-menu .nav-list{
@@ -92,6 +93,7 @@ li:hover::before {
 }
 
 .content{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -109,7 +111,26 @@ li:hover::before {
 .content h2{
     color: #05095e;
     font-weight: 200;
+    margin-bottom: 50px;
 }
+
+
+.content .dd::before{
+    position: absolute;
+    content: "";
+    height: 11px;
+    background: #FFC800;
+    width: 33%;
+    display: inline-block;
+    top: 45.6%;
+    z-index: -1;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+}
+
 
 .btn-m{
     background: #00095e;
@@ -120,7 +141,6 @@ li:hover::before {
     font-size: 15px;
     border-radius: 5px;
     cursor: pointer;
-    margin: 50px 0;
 } 
 
 .btn-m:hover{
@@ -154,4 +174,72 @@ li:hover::before {
     100% {
         left: 0; 
     }
+}
+
+.events-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.events-container{
+    display: flex;
+    flex-direction: column;
+    width: 362px;
+    height: 400px;
+    margin: 0 40px;
+    padding-bottom: 15px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin-top: 100px;
+}
+
+.events-container .price, .day{
+    width: 362px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.events-container .price p{
+    font-size: 24px;
+}
+
+.events-container .price h2{
+    color: #007bff;
+}
+
+.events-container .day a{
+    color: #007bff;
+    background: #c4bfbf;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.about{
+    display: flex;
+    padding-top: 100px;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.about-btn-txt{
+    width: 470px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    justify-content: space-evenly;
+}
+
+.about-btn-txt h1{
+    color: #00095e;
+    font-size: 50px;
+}
+
+.about-btn-txt p{
+    color: #c4bfbf;   
 }
